@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayush-website</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+
+*{
+    padding: 0;
+    margin:0;
+    box-sizing:border-box;
+    font-family:'montserrat';
+}
+html,body{
+    height:100%;
+    width:100%;
+}
+#main{
+    height:100%;
+    width:100%;
+}
+#navbar{
+    height:120px;
+    width:100%;
+    background-color:black;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    /* position:fixed; */
+    font-size:1vw;
+    border-bottom:2px solid #dadada;
+}
+#nav1{
+    display:flex;
+    align-items:center;
+    gap:40px;
+    padding:2vw;
+    text-transform: uppercase;
+}
+#nav2{
+    display:flex;
+    align-items:center;
+    padding:2.5vw;
+    justify-content:flex-start;
+    gap:98px;
+    text-transform: uppercase;
+
+}
+#logo{
+    width:100px;
+}
+#content{
+    height:100%;
+    width:100%;
+    display:flex;
+    background-color: black;
+}
+#left {
+    height:100%;
+    width:40%;
+    padding:4vw;
+
+}
+#right{
+    height:100%;
+    width:60%;
+    /* padding:3vw; */
+    margin-left: 10px;
+    padding-left:100px;
+
+
+}
+span{
+    color:#CE33D4;
+}
+#left h1{
+    font-size:7vw;
+    line-height:8vw;
+    color:white;
+}
+p{
+    font-size:3vw;
+    margin-top:2vw;
+    color:white;
+}
+#right img{
+    width:80%;
+}
+button{
+    font-size:1.5vw;
+    padding:1vw;
+    background-color:#CE33D4;
+    color:white;
+    font-weight:700;
+    margin-top:1.5vw;
+    border-radius:1vw;
+}
+.ri-menu-line{
+    display:none;
+}
+#right #phonevideo{
+    width:100%;
+    height:60%;
+    padding:0;
+}
+#left #discountvideo{
+    height:100px;
+    width:100%;
+    position:absolute;
+    top:600px;
+    left:0px;
+}
+#page2{
+    height:100%;
+    width:100%;
+    background-color: black;
+    color:white;
+}
+#Apple,#Samsung,#one-plus,#realme,#redmi,#oppo{
+    width:200px;
+    height:200px;
+    background-color:white;
+}
+#brands{
+    height:80%;
+    width:100%;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* align-items: center; */
+    /* position: absolute; */
+    border-radius: 2vw;;
+}
+#heading{
+    height:80px;
+    width:100%;
+    /* background-color: red; */
+    display:flex;
+    justify-content: center;
+    font-size:2vw;
+    position: absolute;
+}
+#Apple img{
+    width:100%;
+    height:59;
+    margin-top:px;
+}
+#Samsung img{
+    width:100%;
+    height:59;
+    margin-top:2px; 
+}
+#realme img{
+    width:100%;
+    height:59;
+    margin-top:px; 
+}
+#one-plus img{
+    width:100%;
+    height:59;
+    margin-top:0px;  
+}
+#redmi img{
+    width:100%;
+    height:13vw;
+    margin-top:0.7px;
+}
+#oppo img{
+    width:100%;
+    height:59;
+    margin-top:2px; 
+}
+/* below code ki wjh se j logo hai vo ubhar rahe hai */
+#Apple:hover img,
+#Samsung:hover img,
+#realme:hover img,
+#one-plus:hover img,
+#redmi:hover img, 
+#oppo:hover img {
+  transform: scale(1.1);
+  transition: transform 0.3s ease; 
+}
+
+@media (max-width:600px){
+
+    #navbar{
+        height:80px;
+        
+    }
+    #nav1{
+        justify-content: space-between;
+    }
+    #nav2 a{
+        display:none;
+
+    }
+    .ri-menu-line{
+        display:block;
+        font-size:8vw;
+        display: flex;
+        align-items:center;
+        justify-content:flex-end;
+    }
+    #logo{
+        width:60px
+    }
+    #content{
+        flex-direction: column;
+    }
+    #left{
+        width:100%;
+        height:40%;
+        padding:6vw;
+    }
+    #left h1{
+        font-size:15vw;
+        line-height:17vw
+    }
+    #left p{
+        font-size:5vw;
+    }
+    #left button{
+        font-size:4vw;
+        margin-top:4vw
+    }
+    #right{
+        width:100%;
+        height:60%;
+        padding-left:0;
+        /* padding-right:2vw; */
+        margin:0;
+    }
+    #page2 #heading h1{
+        font-size:7.5vw;
+        font-weight:600;
+    }
+    #heading {
+        height: 40px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-left: 0;
+      }
+      /*to maintain a distance between heading AND brands padding is given*/
+      
+      #brands {
+        height: calc(100% - 40px); 
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding-top: 30px; 
+      }
+      
+      #Apple,
+      #Samsung,
+      #one-plus,
+      #realme,
+      #redmi,
+      #oppo {
+        width: 80px;
+        height: 80px;
+        background-color: white;
+        margin: 10px auto; /* Add margin to create space between brand elements */
+      }
+      #redmi img{
+        width:100%;
+        height:22.1vw;
+        margin-top:0.7px;
+      }
+        #Apple:hover img,
+        #Samsung:hover img,
+        #realme:hover img,
+        #one-plus:hover img,
+        #redmi:hover img, 
+        #oppo:hover img {
+         transform: scale(1.1);
+         transition: transform 0.3s ease; 
+      }
+      button:hover{
+        background-color:white;
+        color:#CE33D4;
+      }
+      #discountvideo{
+        margin-top:70px;
+      }
+      
+}
+a{
+    text-decoration:none;
+    color:white;
+}
+#nav2 a:hover {
+    color: #CE33D4; 
+}
+button:hover{
+    background-color:white;
+    color:#CE33D4;
+}
+
+
+
+
+/* below is the code for nav bar for phone  */
+
+
+
+@media (max-width:600px){
+
+    #navforphone{
+        display:block;
+    }
+
+}
+#navforphone {
+    transform: translateX(-100%);
+  }
+  
+  @media (max-width: 600px) {
+    #navforphone {
+      transform: translateX(0); 
+    }
+  }
+  #navforphone {
+    width:100%;
+    height:100vh;
+    /* background-color: red; */
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    color:white;
+    flex-direction: column;
+    text-transform: uppercase;
+    display: none;
+    transition: transform 1s ease;
+    background-color: black;
+    transform: translateX(-100%); 
+  }
+  #navforphone a{
+    text-decoration: none;
+    color:white;
+  }
+  
+  #navforphone.open {
+    display: flex;
+    transform: translateX(0);
+  }
+  #navforphone h3 {
+    margin-bottom: 20px;
+  }
+  .ri-cross-line{
+    font-size: 32px;
+    color:white;
+  }
+  
+
+    </style>
+</head>
+<body>
+<div id="main">
+    <div id="navbar">
+        <div id="nav1">
+            <img id="logo" src="./ayushwebsitewithoutbg.png" alt="image">
+           
+            
+        </div>
+        <div id="nav2">
+            <!-- <h3><button>Signup</button></h3> -->
+            <a href="index.html" ><h3>Home</h3></a>
+            <a href="about.html"><h3>about us</h3></a>
+            <a href="contact.html"><h3>Contact</h3></a>
+            <a href="store.html"><h3>Store</h3></a>
+            <a href="signup.html"><h3>signup</h3></a>
+            <i class="ri-menu-line"></i>
+        </div>
+    </div>
+    <div id="navforphone">
+        <a href="index.html" ><h3>Home</h3></a>
+        <a href="about.html"><h3>about us</h3></a>
+        <a href="contact.html"><h3>Contact</h3></a>
+        <a href="store.html"><h3>Store</h3></a>
+        <a href="signup.html"><h3>signup</h3></a>
+    </div>
+    <div id="content">
+        <div id="left">
+            <h1><span>Digii</span>  Destination</h1> 
+            <p>Mobiles at best price</p>
+            <<a href="./store.html"><button>Explore Now</button></a>
+            <video id="discountvideo" autoplay muted loop src="./cuttedoffervideo.mp4"></video>
+        </div>
+        <div id="right">
+            <video id="phonevideo" autoplay loop muted src="./phones.mp4"></video>
+            
+        </div>
+    </div>
+    <div id="page2">
+        
+    <div id="heading">
+        <h1>Explore Our Trusted Brands</h1>
+    </div>
+    <div id="brands">
+            <div id="Apple">
+               <a href="store.html"><img src="./applenewlogo.png" alt=""></a>
+            </div>
+            <div id="Samsung">
+               <a href="store.html"> <img src="./samsungnewlogo.png" alt=""></a>
+            </div> 
+            <div id="realme">
+                <a href="store.html"><img src="./realmelogo.png" alt=""></a>
+            </div>
+            <div id="one-plus">
+               <a href="store.html"> <img src="./oneplusnewlogo.png" alt=""></a>
+            </div>
+            <div id="redmi">
+               <a href="store.html"> <img src="./redminewlogo.png" alt=""></a>
+            </div>
+            <div id="oppo">
+               <a href="store.html"> <img src="./oppologonew.png" alt=""></a>
+            </div>
+         </div>
+    </div>
+</div>
+<script>
+    
+const nav = document.getElementById('navforphone');
+
+function toggleNav() {
+  nav.classList.toggle('open'); 
+}
+// Get menu icon and nav elements
+const menuIcon = document.querySelector('.ri-menu-line'); 
+// const nav = document.getElementById('navforphone');
+
+// Add click event to menu icon
+menuIcon.addEventListener('click', function() {
+
+  // Toggle open class on nav 
+  nav.classList.toggle('open');
+
+  // Toggle display of content
+  const content = document.getElementById('content');
+  content.style.display = content.style.display === 'none' ? 'flex' : 'none'; 
+
+});
+// const menuIcon = document.querySelector('.menu-icon');
+
+menuIcon.addEventListener('click', () => {
+
+  if(menuIcon.classList.contains('ri-menu-line')) {
+    menuIcon.classList.replace('ri-menu-line', 'ri-cross-line');
+  } else {
+    menuIcon.classList.replace('ri-cross-line', 'ri-menu-line'); 
+  }
+  
+  // Toggle menu open/closed
+
+});
+
+
+</script>
+</body>
+</html>

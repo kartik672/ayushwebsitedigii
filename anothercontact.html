@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about us</title>
+    <link rel="stylesheet" href=".css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+<style>
+   *{
+    padding:0px;
+    margin:0px;
+    /* background-color: black; */
+}
+html,body{
+    height:100%;
+    width:100%;
+    box-sizing: border-box;
+}
+#main{
+    height:100%;
+    width:100%;
+    /* background-color:black; */
+}
+#navbar{
+    height:120px;
+    width:100%;
+    background-color:black;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    color:white;
+    border-bottom:2px solid #dadada;
+    font-size:1vw;
+}
+#nav1 img{
+    width:100px;
+}
+#nav2{
+    display:flex;
+    gap:98px;
+    /* margin-right:10px; */
+    text-transform: uppercase;
+    padding:2.5vw;
+    
+}
+#nav2 h3:hover{
+    color:rgb(237, 51, 150);
+}
+#nav1{
+    margin-left:30px;
+}
+#nav2 a{
+    text-decoration:none;
+    color:white;
+}
+.ri-menu-line{
+    display:none;
+}
+#right h1{
+    text-decoration:underline;
+    text-decoration-color: #CE33D4;
+}
+@media (max-width:600px){
+
+    #navbar{
+        height:80px;
+        
+    }
+    #nav1{
+        justify-content: space-between;
+    }
+    #nav2 a{
+        display:none;
+
+    }
+    .ri-menu-line{
+        display:block;
+        font-size:8vw;
+        display: flex;
+        align-items:center;
+        justify-content:flex-end;
+    }
+   #nav1 img{
+    width:60px;
+   }
+    #content{
+        flex-direction: column;
+        /* position: relative; */
+    }
+    #left{
+        width:100%;
+        height:60%;
+        padding:1vw;
+        /* position: absolute; */
+        
+        
+    }
+    
+ 
+      /*to maintain a distance between heading AND brands padding is given*/
+      
+      
+}
+#page1{
+    width:100%;
+    height:100vh;
+    background-color: black;
+    color:white;
+    display: flex;
+    
+}
+#left{
+    padding:40px;
+    background-color: black;
+    height:100%;
+    width:65%;
+}
+#right{
+    /* background-color: crimson; */
+    height:111vh;
+    width:35%;
+}
+#left h1{
+    font-size: 60px;
+    margin-bottom:20px;
+}
+#left h2{
+    font-size: 40px;
+}
+#left span{
+    color:#CE33D4;
+}
+#chize{
+    height:300px;
+    width:90%;
+    margin-top:20px;
+    padding:15px;
+    border-radius: 20px;
+    background-color: #cf33d44a;
+}
+.chize-field{
+    display: flex;
+    margin-top:40px;
+    margin-bottom:20px;
+    align-items: center;
+    /* background-color: blueviolet; */
+}
+.chize-field i{
+    margin-right:10px;
+}
+.chize-field a{
+    color:#CE33D4;
+    text-decoration: none;
+}
+#right img{
+    margin-top:50px;
+}
+
+@media (max-width:600px){
+    #page1{
+        display:flex;
+        flex-direction: column;
+    }
+    #left{
+        height:60%;
+        width:100%;
+        overflow: auto;
+    }
+    #right img{
+        object-fit: cover;
+    }
+    #left h1{
+        font-size: 20px;
+    }
+    #left h2{
+        font-size: 10px;
+    }
+    #left .chize-field {
+        font-size: 10px;
+    }
+    #left #chize{
+        width:70%
+
+    }
+
+}
+
+
+
+
+/* below is the code for nav bar for phone  */
+
+
+  
+
+  
+
+</style>
+</head>
+<body>
+    <div id="main">
+        <div id="navbar">
+            <div id="nav1">
+                <img id="logo" src="./ayushwebsitewithoutbg.png" alt="image">
+            </div>
+            <div id="nav2">
+                  <!-- <h3><button>Signup</button></h3> -->
+                  <a href="index.html" ><h3>Home</h3></a>
+                  <a href="about.html"><h3>about us</h3></a>
+                  <a href="contact.html"><h3>Contact</h3></a>
+                  <a href="store.html"><h3>Store</h3></a>
+                  <a href="signup.html"><h3>signup</h3></a>
+                  <i class="ri-menu-line"></i>
+            </div>
+        <!-- </div>
+        <div id="navforphone">
+            <a href="index.html" ><h3>Home</h3></a>
+            <a target="_blank" href="about.html"><h3>about us</h3></a>
+            <a href="contact.html"><h3>Contact</h3></a>
+            <a href="store.html"><h3>Store</h3></a>
+            <a href="signup.html"><h3>signup</h3></a>
+        </div> -->
+        
+       
+    </div>
+    <div id="page1">
+        <div id="left">
+            <div id="tq">
+                <h1>Thank you for your interest in reaching out to <span>us</span>.</h1>
+                <h2> We value your feedback, questions, and inquiries.</h2>
+            </div>
+            <div id="chize">
+
+                <div class="chize-field">
+                    <i class="ri-mail-line"></i>
+                    <h3>Email us at- <a href="mailto:digiidestination@gmail.com">digiidestination@gmail.com</a></h3>
+                </div>
+
+                <div class="chize-field">
+                    <i class="ri-smartphone-line"></i>
+                    <h3>Phone: <a href="tel:+917523079864">7523079864</a> , <a href="tel:+919695464048">9695464048</a> , <a href="tel:+918175945344">8175945344</a></h3>
+                </div>
+
+                <div class="chize-field">
+                    <i class="ri-git-repository-private-line"></i>
+                    <h3>We take your privacy seriously. To understand how we handle your personal information, please review our <a href="">Privacy Policy</a>.</h3>
+                </div>
+
+                <div class="chize-field">
+                    <i class="ri-instagram-line"></i>
+                    <h3>Follow us on Instagram: <a href="https://instagram.com/digiidestination_official_?igshid=MzRlODBiNWFlZA==">digiidestination_official_</a></h3>
+                </div>
+
+            </div>
+            <h3>If you plan to visit us in person, you can find our location on the map below:</h3>
+        </div>
+        <div id="right">
+            <img src="./contactcollage-removebg-preview.png" alt="">
+        </div>
+    </div>
+    <script src="contact.js"></script>
+    <script>
+    
+        const nav = document.getElementById('navforphone');
+        
+        function toggleNav() {
+          nav.classList.toggle('open'); 
+        }
+        // Get menu icon and nav elements
+        const menuIcon = document.querySelector('.ri-menu-line'); 
+        // const nav = document.getElementById('navforphone');
+        
+        // Add click event to menu icon
+        menuIcon.addEventListener('click', function() {
+        
+          // Toggle open class on nav 
+          nav.classList.toggle('open');
+        
+          // Toggle display of content
+          const content = document.getElementById('content');
+          content.style.display = content.style.display === 'none' ? 'flex' : 'none'; 
+        
+        });
+        // const menuIcon = document.querySelector('.menu-icon');
+        
+        menuIcon.addEventListener('click', () => {
+        
+          if(menuIcon.classList.contains('ri-menu-line')) {
+            menuIcon.classList.replace('ri-menu-line', 'ri-cross-line');
+          } else {
+            menuIcon.classList.replace('ri-cross-line', 'ri-menu-line'); 
+          }
+          
+          // Toggle menu open/closed
+        
+        });
+        
+        
+        </script>
+</body>
+</html>
