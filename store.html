@@ -4,162 +4,409 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>store</title>
-    <link rel="stylesheet" href="iphone14.css">
+    <link rel="stylesheet" href="about.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+
+<style>
+    *{
+    padding:0px;
+    margin:0px;
+    /* background-color: black; */
+}
+html,body{
+    height:100%;
+    width:100%;
+    box-sizing: border-box;
+    background-color: black;
+}
+#main{
+    height:100%;
+    width:100%;
+    /* background-color:black; */
+}
+#navbar{
+    height:120px;
+    width:100%;
+    background-color:black;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    color:white;
+    border-bottom:2px solid #dadada;
+    font-size:1vw;
+}
+#nav1 img{
+    width:100px;
+}
+#nav2{
+    display:flex;
+    gap:98px;
+    /* margin-right:10px; */
+    text-transform: uppercase;
+    padding:2.5vw;
+    
+}
+#nav2 h3:hover{
+    color:rgb(237, 51, 150);
+}
+#nav1{
+    margin-left:30px;
+}
+
+#nav2 a{
+    text-decoration:none;
+    color:white;
+}
+.ri-menu-line{
+    display:none;
+}
+#right h1{
+    text-decoration:underline;
+    text-decoration-color: #CE33D4;
+}
+@media (max-width:600px){
+
+    #navbar{
+        height:80px;
+        
+    }
+    #nav1{
+        justify-content: space-between;
+    }
+    #nav2 a{
+        display:none;
+
+    }
+    .ri-menu-line{
+        display:block;
+        font-size:8vw;
+        display: flex;
+        align-items:center;
+        justify-content:flex-end;
+    }
+   #nav1 img{
+    width:60px;
+   }
+    #content{
+        flex-direction: column;
+        /* position: relative; */
+    }
+    #left{
+        width:100%;
+        height:60%;
+        padding:1vw;
+        /* position: absolute; */
+        
+        
+    }
+    
+    #right{
+        width:90%;
+        height:40%;
+        /* padding-right:2vw; */
+        margin:0;
+        /* position:absolute; */
+        bottom:0px;
+        padding-right:3vw;
+      padding-left:2.5vw;
+        /* font-size:3vw; */
+      /* overflow-x: hidden; */
+      
+    }
+    #right p{
+      font-size:medium;
+    }
+  #right h1{
+    font-size:7vw;;
+    margin-bottom: 5vw;
+  }
+    
+    #page2 #heading h1{
+        font-size:7.5vw;
+        font-weight:600;
+    }
+    #heading {
+        height: 40px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-left: 0;
+      }
+      #content{
+        flex-direction: column;
+      }
+      #left img{
+        left: 100px;
+      }
+      /*to maintain a distance between heading AND brands padding is given*/
+      
+      
+}
+.container{
+    width:675px;
+    height:520px;
+    background-color: black;
+    margin-left:400px;
+    margin-top:80px;
+    border-radius: 15px;
+    box-shadow:4px 4px 50px #CE33D4;
+    padding:20px;
+    overflow-y:scroll;
+    color:white;
+
+}
+.container::-webkit-scrollbar{
+    display: none;
+}
+.container form{
+    width:100%;
+    border:1px solid white;
+    border-radius:4px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.container form input{
+    border:0;
+    outline:0;
+    box-shadow: 0;
+    border-radius:4px;
+    width:100%;
+    font-size:16px;
+    font-weight: 600;
+    background-color:black ;
+    padding:8px 10px;
+    color:white
+}
+.container form i{
+    padding-left:10px;
+}
+.container .product{
+    display: flex;
+    padding:5px 6px;
+    /* margin-top:10px; */
+    margin-top:10px;
+    border-bottom: 1px solid rgba(245, 245, 245, 0.672);
+    cursor:pointer
+}
+.container .product img{
+    width:60px;
+}
+.container .product h2{
+    margin-left:10px;
+}
+.product-list{
+    padding:15px 0;
+}
+.product-list .product h2{
+    font-family: 'Quicksand';
+    font-size: 16px;
+    font-weight: 900;
+}
+.product a{
+    text-decoration: none;
+    color:white;
+}
+/* chatgpt ka code given below for responsivness */
+
+
+
+@media (max-width: 600px) {
+    #navbar {
+        height: 80px;
+    }
+    #nav1 {
+        justify-content: space-between;
+    }
+    #nav2 a {
+        display: none;
+    }
+    .ri-menu-line {
+        display: block;
+        font-size: 8vw;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    #nav1 img {
+        width: 60px;
+    }
+    .container {
+        width: 80%;
+        height: auto;
+        margin: 20px 0;
+        border-radius: 15px;
+        box-shadow: 4px 4px 50px #CE33D4;
+        padding: 20px;
+        overflow-y: scroll;
+    }
+    .container form input {
+        width: 100%;
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+    .container .product {
+        flex-direction: column; /* Stack products vertically */
+        padding: 10px 0; /* Adjust padding for smaller screens */
+    }
+    .container .product img {
+        width: 40px; /* Make images responsive */
+    }
+    .container .product h2 {
+        font-size: 14px; /*Adjust font size for smaller screens */
+        margin-left: 0; /* Reset margin */
+        margin-top: 10px;
+    }
+    /* Additional adjustments for better mobile experience */
+    .product-list {
+        padding: 10px 0;
+    }
+    #right h1 {
+        font-size: 7vw;
+        margin-bottom: 10px;
+    }
+}
+
+
+
+</style>
 </head>
 <body>
-    <div id="main">
-        <div id="navbar">
-            <div id="nav1">
-                <img id="logo" src="./ayushwebsitewithoutbg.png" alt="image">
-            </div>
-            <div id="nav2">
-                  <!-- <h3><button>Signup</button></h3> -->
-                  <a href="index.html" ><h3>Home</h3></a>
-                  <a href="about.html"><h3>about us</h3></a>
-                  <a href="contact.html"><h3>Contact</h3></a>
-                  <a href="store.html"><h3>Store</h3></a>
-                  <a href="signup.html"><h3>signup</h3></a>
-                  <i class="ri-menu-line"></i>
-            </div>
+    <div id="navbar">
+        <div id="nav1">
+            <img id="logo" src="./ayushwebsitewithoutbg.png" alt="image">
         </div>
-        <div id="navforphone">
-            <a href="index.html" ><h3>Home</h3></a>
-            <a target="_blank" href="about.html"><h3>about us</h3></a>
-            <a href="contact.html"><h3>Contact</h3></a>
-            <a href="store.html"><h3>Store</h3></a>
-            <a href="signup.html"><h3>signup</h3></a>
+        <div id="nav2">
+              <!-- <h3><button>Signup</button></h3> -->
+        <a href="index.html" ><h3>Home</h3></a>
+        <a href="about.html" ><h3>about us</h3></a>
+        <a href="contact.html"><h3>Contact</h3></a>
+        <a href="store.html"><h3>Store</h3></a>
+        <a href="signup.html"><h3>signup</h3></a>
+        <i class="ri-menu-line"></i>
         </div>
-        <div id="content">
-            <div id="page1">
-                <div id="left">
-                    <div id="small-phones">
-                        <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/3/5/l/-original-imaghx9qmgqsk9s4.jpeg?q=70" class="img1" alt="">
-                        <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/5/w/3/-original-imaghxcpnf8aay8h.jpeg?q=70" class="img2" alt="">
-                        <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/n/b/z/-original-imaghxcpwuhbghgh.jpeg?q=70" class="img3" alt="">
-                        <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/5/i/7/-original-imaguypzzhbzm5an.jpeg?q=70" class="img4" alt="">
-                        <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/1/d/y/-original-imaghxcpvtta2hzs.jpeg?q=70" class="img5" alt="">
-                    </div>
-                    <div id="main-phone">
-                        <img src="./iphone14bgremoveimg1.png"class="imgchanger" alt="">
-                    </div>
-                </div>
-                <div id="right">
-                    <div id="description">
-                        <h1 id="heading">APPLE iPhone 14 (Blue, 128 GB)</h1>
-                        <div id="rating">
-                            <p>4.7<i class="ri-star-fill"></i></p>
-                        </div>
-                        <!-- <p>Extra  &#8377 7901  off</p> -->
-                        <div id="pricing">
-                            <h1>&#8377 61,999</h1>
-                            <strike>73,999</strike>
-                            <p>11% off</p>
-                        </div>
-                        <!-- <p>+99 secure fee packaging</p> -->
-                        <p>1 Year Warranty for Phone and 6 Months Warranty for In-Box Accessories</p>
-                        <div id="button">
-                            <button id="buy">Buy Now</button>
-                        </div>
-                        <div id="storage-color">
-                            
-                            <div id="phone-color">
-                                <div id="red">
-                                    <img src="./rediphone14removebg.png" alt="">
-                                </div>
-                                <div id="blue">
-                                    <img src="./iphone14bgremoveimg1.png" alt="">
-                                </div>
-                                <div id="black">
-                                    <img src="./blackiphone14removebg.png" alt="">
-                                </div>
-                                <div id="white">
-                                    <img src="./whiteiphone14removebg.png" alt="">
-                                </div>
-                            </div>
-                            
-                            <div id="storage">
-                                <fieldset>
-                                    <legend>Storage</legend>
-                                    <!-- <button>128GB</button>
-                                    <button>256GB</button>
-                                    <button>512GB</button> -->
-                                    <div id="128GB">
-                                        
-                                        <label for="128GB">
-                                            <input type="radio" id="128GB" value="128GB" name="storage" checked>
-                                            128GB
-                                        </label>
-                                    </div>
-                                    <div id="256GB">
-                                        
-                                        <label for="256GB">
-                                            <input type="radio" id="256GB" value="256GB" name="storage">
-                                            256GB
-                                        </label>
-                                    </div>
-                                    <div id="512GB">
-                                       
-                                        <label for="512GB">
-                                            <input type="radio" id="512GB" value="512GB" name="storage">
-                                            512GB
-                                        </label>
-                                   </div>
-                                </fieldset>
-                            </div>
-                        </div>
-    
-                        
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-            <div id="page2">
-                <div id="detail1">
-                    <div id="left1">
-                        <img src="./iphone14img5.png" alt="">
-                    </div>
-                    <div id="right1">
-                        <h3>
-                            Super Retina XDR Display</h3>
-                        <p>The iPhone 14 display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle. When measured as a standard rectangular shape, the screen is 15.40 centimetres (6.06) diagonally.</p>
-                    </div>
-                </div>
-                <div id="detail2">
-                    <div id="left2">
-                        <h3>Dual-camera System</h3>
-                        <p>Equipped with a 12 MP Main camera and an ultra wide camera, you can click beautiful pictures on this phone’s dual camera system. You can also capture your wild memories on the Portrait mode with Focus and Depth Control to create a memorable memory.</p>
-                    </div>
-                    <div id="right2">
-                        <img src="./iphone14img3.png" alt="">
-                    </div>
-                </div>
-                <div id="detail3">
-                    <div id="left3">
-                        <img src="./batteryclearremovebg.png" alt="">
-                    </div>
-                    <div id="right3">
-                        <h3>
-                            Power and Battery</h3>
-                        <p>Powered by a MagSafe wireless charging up to 15 W and Qi wireless charging up to 7.5 W, this phone has a built-in rechargeable lithium-ion battery. With a fast-charge capability where you can boost up your battery up to 50% charge in around 30 minutes with a 20 W adapter or higher (available separately). You can have up to 20 hours of video playback time, up to 16 hours of streaming, and up to 80 hours of audio playback time.
-
-                        </p>
-                    </div>
-                </div>
-                <div id="detail4">
-                    <div id="button">
-                        <button class="button1">Back to top</button>
-                        <button class="button1">Buy now</button>
-                        <button class="button1">Explore more</button>
-                    </div>
-                </div>
-            </div>
     </div>
-    <script src="store.js"></script>
+    <div id="navforphone">
+        <a href="index.html" ><h3>Home</h3></a>
+        <a target="_blank" href="about.html"><h3>about us</h3></a>
+        <a href="contact.html"><h3>Contact</h3></a>
+        <a href="store.html"><h3>Store</h3></a>
+        <a href="signup.html"><h3>signup</h3></a>
+    </div>
+    <section class="container">
+     <form action="">
+        <i class="ri-search-line"></i>
+        <input type="text" id="search-items" placeholder="search here" onkeyup="search()">
+     </form>
+
+     <div class="product-list" id="product-list">
+        <div class="product">
+            <img src="https://rukminim2.flixcart.com/image/416/416/ktketu80/mobile/2/y/o/iphone-13-mlpk3hn-a-apple-original-imag6vpyur6hjngg.jpeg?q=70" alt="">
+            <h2>APPLE iPhone 13 (Blue, 128 GB)</h2>
+        </div>
+        <div class="product">
+            <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/k/1/o/-original-imagmg6gz3bsgan7.jpeg?q=70" alt="">
+            <h2>SAMSUNG Galaxy S23 Ultra 5G (Cream, 256 GB)  (12 GB RAM)</h2>
+        </div>
+        <div class="product">
+            <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/1/r/n/-original-imagmg6gyzgzzszt.jpeg?q=70" alt="">
+            <h2>SAMSUNG Galaxy S23 5G (Cream, 256 GB)  (8 GB RAM)</h2>
+        </div>
+        <div class="product">
+            <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/3/5/l/-original-imaghx9qmgqsk9s4.jpeg?q=70" alt="">
+            <a href="iphone14.html"><h2>APPLE iPhone 14 (Blue, 128 GB)</h2></a>
+        </div>
+        <div class="product">
+            <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/l/v/8/-original-imaghx9qudmydgc4.jpeg?q=70" alt="">
+            <h2>APPLE iPhone 14 Plus (Starlight, 128 GB)</h2>
+        </div>
+        <div class="product">
+            <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/l/v/8/-original-imaghx9qudmydgc4.jpeg?q=70" alt="">
+            <h2>APPLE iPhone 14 Plus (Starlight, 128 GB)</h2>
+        </div>
+        <div class="product">
+            <img src="https://rukminim2.flixcart.com/image/416/416/ksnjp8w0/mobile/w/u/8/galaxy-z-flip3-5g-sm-f711bzeeinu-samsung-original-imag662adrayy6cg.jpeg?q=70" alt="">
+            <h2>SAMSUNG Galaxy Z Flip3 5G (Cream, 128 GB)  (8 GB RAM)</h2>
+        </div>
+        <div class="product">
+            <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/h/e/d/-original-imagh7nnemnbgtts.jpeg?q=70" alt="">
+            <h2>SAMSUNG Galaxy Z Flip4 5G (Pink Gold, 128 GB)  (8 GB RAM)</h2>
+        </div>
+        <div class="product">
+            <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/h/d/9/-original-imagtc2qzgnnuhxh.jpeg?q=70" alt="">
+            <h2>APPLE iPhone 15 (Black, 128 GB)</h2>
+        </div>
+        <div class="product">
+            <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/1/i/x/-original-imagtc6fhhtqjnr9.jpeg?q=70" alt="">
+            <h2>APPLE iPhone 15 Plus (Blue, 128 GB)</h2>
+        </div>
+        <div class="product">
+            <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/a/r/5/-original-imagtc3kcmph6ax5.jpeg?q=70" alt="">
+            <h2>APPLE iPhone 15 Pro Max (Black Titanium, 256 GB)</h2>
+        </div>
+        <div class="product">
+            <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/9/u/a/-original-imagtc4hsx9mzfra.jpeg?q=70" alt="">
+            <h2>APPLE iPhone 15 Pro (Natural Titanium, 128 GB)</h2>
+        </div>
+        <div class="product">
+            <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/i/h/c/-original-imaghxemmqyahnuj.jpeg?q=70" alt="">
+            <h2>APPLE iPhone 14 Pro (Gold, 1 TB)</h2>
+        </div>
+        <div class="product">
+            <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/t/o/b/galaxy-flip5-sm-f731blgains-samsung-original-imagru5pcagms7me.jpeg?q=70" alt="">
+            <h2>SAMSUNG Galaxy Z Flip5 (Mint, 256 GB)  (8 GB RAM)</h2>
+        </div>
+        <div class="product">
+            <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/u/w/t/galaxy-flip5-sm-f731bliains-samsung-original-imagru5pgwsfnrmq.jpeg?q=70" alt="">
+            <h2>SAMSUNG Galaxy Z Flip5 (Lavender, 512 GB)  (8 GB RAM)
+            </h2>
+        </div>
+        <div class="product">
+            <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/3/2/r/galaxy-fold5-sm-f946blbhins-samsung-original-imagru5ugghfnwnj.jpeg?q=70" alt="">
+            <h2>SAMSUNG Galaxy Z Fold5 (Icy Blue, 256 GB)  (12 GB RAM)</h2>
+        </div>
+        <div class="product">
+            <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/b/x/i/galaxy-fold5-sm-f946bzkdins-samsung-original-imagru9nrhhmd9hz.jpeg?q=70" alt="">
+            <h2>SAMSUNG Galaxy Z Fold5 (Phantom Black, 512 GB)  (12 GB RAM)</h2>
+        </div>
+        <div class="product">
+            <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/w/t/r/-original-imaggj68cgtdacxn.jpeg?q=70" alt="">
+            <h2>SAMSUNG Galaxy S22 Ultra 5G (Phantom Black, 256 GB)  (12 GB RAM)</h2>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/71Ii1syiYrL._SX679_.jpg" alt="">
+            <h2>Samsung Galaxy S23 FE 5G (Purple, 8GB, 256GB)</h2>
+        </div>
+        <!-- <div class="product">
+            <img src="" alt="">
+            <h2></h2>
+        </div> -->
+     </div>
+    </section> 
+    <script>
+        const search = ()=>{
+            const searchbox = document.getElementById("search-items").value.toUpperCase();
+            const storeitems = document.getElementById("product-list");
+            const product = document.querySelectorAll(".product");
+            const pname = document.getElementsByTagName("h2");
+
+            for(let i = 0; i < pname.length ; i++){
+                let match = product[i].getElementsByTagName('h2')[0];
+
+                if(match){
+                   let textvalue = match.textContent || match.innerHTML
+
+                   if(textvalue.toUpperCase().indexOf(searchbox) > -1){
+                      product[i].style.display = "";
+                   }else{
+                    product[i].style.display = "none";
+                   }
+                }
+            }
+        }
+    </script>
     <script>
     
         const nav = document.getElementById('navforphone');
@@ -197,123 +444,6 @@
         });
         
         
-        </script>
-        <script>
-            // const img1 = document.getElementsByClassName("img1");
-// const img2 = document.getElementsByClassName("img2");
-const img3 = document.getElementsByClassName("img3")[0];
-const img4 = document.getElementsByClassName("img4")[0];
-const img5 = document.getElementsByClassName("img5")[0];
-// const imgchange = document.getElementsByClassName("imgchanger");
-
-// function changeImageOnHover(){
-//     img1.src = 
-// }
-// img1.addEventListener("mouseover", function(){
-//     imgchange.src = "https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/3/5/l/-original-imaghx9qmgqsk9s4.jpeg?q=70";
-
-// })
-const img1 = document.getElementsByClassName("img1")[0];
-const img2 = document.getElementsByClassName("img2")[0];
-const imgchange = document.getElementsByClassName("imgchanger")[0];
-
-img2.addEventListener("mouseover", function(){
-    imgchange.src = "https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/5/w/3/-original-imaghxcpnf8aay8h.jpeg?q=70";
-    imgchange.style.width = "500px";
-});
-// img2.addEventListener("click", function(){
-//     imgchange.src = "https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/5/w/3/-original-imaghxcpnf8aay8h.jpeg?q=70";
-//     imgchange.style.width = "500px";
-// });
-img2.addEventListener("mouseout", function(){
-    imgchange.src = "./iphone14bgremoveimg1.png";
-    imgchange.style.width = "400px";
-});
-img1.addEventListener("mouseover", function(){
-    imgchange.src = "./iphone14bgremoveimg1.png";
-    imgchange.style.width = "400px";
-});
-// img1.addEventListener("click", function(){
-//     imgchange.src = "https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/3/5/l/-original-imaghx9qmgqsk9s4.jpeg?q=70";
-//     imgchange.style.width = "400px";
-// });
-img1.addEventListener("mouseout", function(){
-    imgchange.src = "./iphone14bgremoveimg1.png";
-    imgchange.style.width = "300px";
-});
-img3.addEventListener("mouseover", function(){
-    imgchange.src = "https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/n/b/z/-original-imaghxcpwuhbghgh.jpeg?q=70";
-    imgchange.style.width = "500px";
-});
-img3.addEventListener("mouseout", function(){
-    imgchange.src = "./iphone14bgremoveimg1.png";
-    imgchange.style.width = "400px";
-});
-img4.addEventListener("mouseover", function(){
-    imgchange.src = "https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/5/i/7/-original-imaguypzzhbzm5an.jpeg?q=70";
-    imgchange.style.width = "500px";
-});
-img4.addEventListener("mouseout", function(){
-    imgchange.src = "./iphone14bgremoveimg1.png";
-    imgchange.style.width = "400px";
-});
-img5.addEventListener("mouseover", function(){
-    imgchange.src = "https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/1/d/y/-original-imaghxcpvtta2hzs.jpeg?q=70";
-    imgchange.style.width = "500px";
-});
-img5.addEventListener("mouseout", function(){
-    imgchange.src = "./iphone14bgremoveimg1.png";
-    imgchange.style.width = "400px";
-});
-
-const GB128 = document.getElementById("128GB");
-const GB256 = document.getElementById("256GB");
-const GB512 = document.getElementById("512GB");
-const heading = document.getElementById("heading");
-
-GB128.addEventListener("click",()=>{
-    heading.innerHTML = "APPLE iPhone 14 (Blue, 128 GB)"
-})
-GB256.addEventListener("click",()=>{
-    heading.innerHTML = "APPLE iPhone 14 (Blue, 256 GB)"
-})
-GB512.addEventListener("click",()=>{
-    heading.innerHTML = "APPLE iPhone 14 (Blue, 512 GB)"
-})
-
-const red = document.getElementById("red")
-const blue = document.getElementById("blue")
-const black = document.getElementById("black")
-const white = document.getElementById("white")
-
-red.addEventListener("click",()=>{
-    imgchange.src="./rediphone14removebg.png"
-    heading.innerHTML = "APPLE iPhone 14 (Red, 128 GB)"
-})
-blue.addEventListener("click",()=>{
-    imgchange.src="./iphone14bgremoveimg1.png"
-    heading.innerHTML = "APPLE iPhone 14 (blue, 128 GB)"
-})
-black.addEventListener("click",()=>{
-    imgchange.src="./blackiphone14removebg.png"
-    heading.innerHTML = "APPLE iPhone 14 (black, 128 GB)"
-})
-white.addEventListener("click",()=>{
-    imgchange.src="./whiteiphone14removebg.png"
-    heading.innerHTML = "APPLE iPhone 14 (white, 128 GB)"
-})
-
-let btn = document.querySelector(".button1");
-
-btn.addEventListener("click", () => {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth" // This will create a smooth scroll effect
-    });
-});
-
-
-
         </script>
 </body>
 </html>
