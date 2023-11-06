@@ -229,11 +229,11 @@ button{
         justify-content: center;
         padding-left: 0;
       }
-      .form-box{
+      /* .form-box{
         width:80%;
-        height:300px;
-        padding-right:100px
-      }
+        height:400px;
+        
+      } */
       #logocontainer{
         z-index: -99;
       }
@@ -241,13 +241,23 @@ button{
         /* position: absolute; */
        z-index:-100;
       }
-      .button-field button{
+      /* .button-field button{
         font-size:5vw;
       }
       .input{
         height:30px;
-        width:180px
+        width:150px
       }
+      .button-field{
+        position: absolute;
+        right: 100;
+        top:280px;
+      }
+      .button-field button{
+       font-size: 20px;
+       height:1px;
+       padding:0;
+      } */
       /*to maintain a distance between heading AND brands padding is given*/
       
       /* #brands {
@@ -288,6 +298,28 @@ button{
         background-color:white;
         color:#CE33D4;
       } */ 
+      .form-box {
+        width: 90%;
+        padding: 30px;
+      }
+    
+      .input {
+        max-height: 50px;
+      }
+    
+      h1 {
+        font-size: 24px; 
+      }
+    
+      .button-field button {
+        font-size: 16px;
+      }
+      #nav2 a {
+        display: none; 
+      }
+      .ri-menu-line {
+        display: block;
+      }
       
 }
 a{
