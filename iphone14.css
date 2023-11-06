@@ -115,60 +115,6 @@ html,body{
    #nav1 img{
     width:60px;
    }
-    #content{
-        flex-direction: column;
-        /* position: relative; */
-    }
-    #left{
-        width:100%;
-        height:60%;
-        padding:1vw;
-        /* position: absolute; */
-        
-        
-    }
-    
-    #right{
-        width:90%;
-        height:40%;
-        /* padding-right:2vw; */
-        margin:0;
-        /* position:absolute; */
-        bottom:0px;
-        padding-right:3vw;
-      padding-left:2.5vw;
-        /* font-size:3vw; */
-      /* overflow-x: hidden; */
-      
-    }
-    #right p{
-      font-size:medium;
-    }
-  #right h1{
-    font-size:7vw;;
-    margin-bottom: 5vw;
-  }
-    
-    #page2 #heading h1{
-        font-size:7.5vw;
-        font-weight:600;
-    }
-    #heading {
-        height: 40px;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        padding-left: 0;
-      }
-      #content{
-        flex-direction: column;
-      }
-      #left img{
-        left: 100px;
-      }
-
-
-     
       
       
 }
@@ -484,54 +430,105 @@ label,#storage input{
     width:100%;
     display:flex;
 }
-@media (max-width:600px){
+
+
+
+  /* below code is for responsivness of the page  */
+  @media (max-width:600px){
+    #content{
+        width:100%;
+        height:100%;
+        display: flex;
+        flex-direction: column;
+
+    }
     #page1{
+        width: 100%;
+        height:100%;
+        display: flex;
         flex-direction: column;
     }
+    #left{
+        max-width: 100%;
+        height:50%;
+    }
     #small-phones img{
-        width:40px;
-        margin:10px;
-        opacity: 0.7;
-        border:1px solid #dadada;
+        width:60px
     }
     #main-phone img{
         width:200px;
-        margin-left: 150px;
     }
-    #right{
-        /* background-color: red; */
+    #small-phones{
+    display: flex;
+    flex-direction: column;
+    padding-left: 60px;
+    padding-top: 60px;
+    }
+    #main-phone{
+        padding-left:80px;
+        padding-top:50px
+    }
+    #right {
         width:100%;
-        padding-left:70px;
-
+        height: 50%;
+        display: flex;
     }
-    #page2{
-        display: none;
+    #description{
+        padding-left:50px;
     }
     #storage-color{
+        display: flex;
         flex-direction: column;
     }
-    #phone-color{
-        margin-right:100px;
-    }
-    #color-heading{
-        display: none;
-    }
     #phone-color img{
-        width:40px;
+        width:50px
     }
-    #rating{
-        margin-top:100px;
+    #page2{
+        height:120vh;
+        width:100%;
+        padding-top:300px
+        
     }
-
+    #detail1 ,#detail2 , #detail3, #detail4{
+        display: flex;
+        flex-direction: column;
+        max-width:100%;
+        padding:0;
+    }
+    #detail1 img ,#detail2 img , #detail3 img, #detail4 img{
+        width:200px;
+        padding-left:0;
+        margin-left:100px;
+    }
+    #right1{
+        width:100%;
+        padding-left:20px;
+    }
+    
+    #left2{
+        width:100%;
+        padding-left:20px;
+    }
+    #button{
+        display: flex;
+        padding-left:20px
+    }
+    #button button{
+        font-size: 17px;
+    }
+    .button1{
+        margin:10px
+    }
+    
+    #right3{
+        width:100%;
+        padding-left:20px;
+    }
+    #heading{
+        margin-top:80px
+    }
+    
 }
-@media (max-width: 600px) {
-    #page1 {
-        width: 100%;
-    }
-}
-
-
-
 
 
 
